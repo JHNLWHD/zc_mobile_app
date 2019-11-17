@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "288299141764",
+    "firebase_url": "https://ilovezapp-bfbbd.firebaseio.com",
+    "project_id": "ilovezapp-bfbbd",
+    "storage_bucket": "ilovezapp-bfbbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288299141764:android:46f4c5df01b6d3e1d1d0d1",
+        "android_client_info": {
+          "package_name": "ph.zict.zc_mobile_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288299141764-t1u108frdiamjbdqoh360l6i8is5bhd8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ph.zict.zc_mobile_app",
+            "certificate_hash": "ede48fae84d833c86aac972d47dba903afbcd409"
+          }
+        },
+        {
+          "client_id": "288299141764-c2o5g3gu4gtu5qhocc8ar0jfr507smd2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtaM9Dl2ZhZpOHjOAypCkdXm29EfuPIVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288299141764-c2o5g3gu4gtu5qhocc8ar0jfr507smd2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

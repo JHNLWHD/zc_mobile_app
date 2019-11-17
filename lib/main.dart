@@ -1,54 +1,34 @@
 import 'package:flutter/material.dart';
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zc_mobile_app/splash/splash_page.dart';
+import 'presentation/_bloc/authentication/authentication.dart';
+import 'presentation/pages/home/home.dart';
 import 'package:zc_mobile_app/user_repository/user_repository.dart';
 
-import 'package:zc_mobile_app/authentication_bloc/authentication.dart';
-import 'package:zc_mobile_app/splash/splash.dart';
-import 'package:zc_mobile_app/login_bloc/login.dart';
-import 'package:zc_mobile_app/home/home.dart';
-import 'package:zc_mobile_app/common/common.dart';
-
-class SimpleBlocDelegate extends BlocDelegate {
-  @override
-  void onEvent(Bloc bloc, Object event) {
-    super.onEvent(bloc, event);
-    print(event);
-  }
-
-  @override
-  void onTransition(Bloc bloc, Transition transition) {
-    super.onTransition(bloc, transition);
-    print(transition);
-  }
-
-  @override
-  void onError(Bloc bloc, Object error, StackTrace stacktrace) {
-    super.onError(bloc, error, stacktrace);
-    print(error);
-  }
-}
+import 'presentation/pages/login/login_page.dart';
+import 'presentation/pages/splash/splash.dart';
+import 'presentation/simple_bloc_delegate.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   BlocSupervisor.delegate = SimpleBlocDelegate();
-  final userRepository = UserRepository();
+  final UserRepository userRepository = UserRepository();
   runApp(
-    BlocProvider<AuthenticationBloc>(
-      builder: (context) {
-        return AuthenticationBloc(userRepository: userRepository)
-          ..add(AppStarted());
-      },
+    BlocProvider(
+      builder: (context) => AuthenticationBloc(userRepository: userRepository)
+        ..add(AppStarted()),
       child: App(userRepository: userRepository),
     ),
   );
 }
 
 class App extends StatelessWidget {
-  final UserRepository userRepository;
+  final UserRepository _userRepository;
 
-  App({Key key, @required this.userRepository}) : super(key: key);
+  App({Key key, @required UserRepository userRepository})
+      : assert(userRepository != null),
+        _userRepository = userRepository,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -58,14 +38,11 @@ class App extends StatelessWidget {
           if (state is AuthenticationUninitialized) {
             return SplashPage();
           }
-          if (state is AuthenticationAuthenticated) {
-            return HomePage();
-          }
           if (state is AuthenticationUnauthenticated) {
-            return LoginPage(userRepository: userRepository);
+            return LoginPage(userRepository: _userRepository);
           }
-          if (state is AuthenticationLoading) {
-            return LoadingIndicator();
+          if (state is AuthenticationAuthenticated) {
+            return HomePage(name: state.displayName);
           }
         },
       ),
