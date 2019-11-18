@@ -26,8 +26,8 @@ class HomePage extends StatelessWidget {
                 ),
                 accountName: Text('${userInfo[0]}'),
                 accountEmail: Text('${userInfo[1]}'),
-                currentAccountPicture: Image(
-                  image: NetworkImage('${userInfo[2]}'),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage('${userInfo[2]}'),
                 ),
             ),
             Expanded(
@@ -93,7 +93,7 @@ class HomePage extends StatelessWidget {
                         }
                     ),
                     ListTile(
-                        leading: Icon(Icons.add),
+                        leading: Icon(Icons.folder),
                         title: Text("Terms and Conditions"),
                         onTap: () {
 
