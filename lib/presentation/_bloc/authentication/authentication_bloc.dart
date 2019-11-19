@@ -15,7 +15,6 @@ class AuthenticationBloc
         _userRepository = userRepository;
 
   @override
-  // TODO: implement initialState
   AuthenticationState get initialState => AuthenticationUninitialized();
 
   @override
@@ -35,8 +34,8 @@ class AuthenticationBloc
     try {
       final isSignedIn = await _userRepository.isSignedIn();
       if (isSignedIn) {
-        final name = await _userRepository.getUser();
-        yield AuthenticationAuthenticated(name);
+        final userInfo = await _userRepository.getUser();
+        yield AuthenticationAuthenticated(userInfo);
       } else {
         yield AuthenticationUnauthenticated();
       }

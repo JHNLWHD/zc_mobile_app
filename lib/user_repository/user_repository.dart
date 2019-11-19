@@ -46,8 +46,13 @@ class UserRepository {
     return currentUser != null;
   }
 
-  Future<String> getUser() async {
-    return (await _firebaseAuth.currentUser()).email;
+  Future<List> getUser() async {
+    List<String> userInfo = [
+      (await _firebaseAuth.currentUser()).displayName,
+      (await _firebaseAuth.currentUser()).email,
+      (await _firebaseAuth.currentUser()).photoUrl];
+
+    return userInfo;
   }
 
 }
