@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:zc_mobile_app/presentation/_bloc/authentication/authentication.dart';
+import 'package:zc_mobile_app/presentation/pages/mayors_action_center/menu_page.dart';
+import 'package:zc_mobile_app/presentation/widgets/mayors_action_center/menu/menu_form.dart';
 
 class HomePage extends StatelessWidget {
   final List<String> userInfo;
@@ -13,6 +15,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: GradientAppBar(
         title: Text('ILoveZApp'),
+        centerTitle: true,
         gradient: LinearGradient(colors: [Colors.blue, Colors.purpleAccent])
       ),
       drawer: Drawer(
@@ -47,7 +50,11 @@ class HomePage extends StatelessWidget {
                         leading: Icon(Icons.call_to_action),
                         title: Text("Mayor's Action Center"),
                         onTap: () {
-
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) {
+                              return MenuPage();
+                            }),
+                          );
                         }
                     ),
                     ListTile(
