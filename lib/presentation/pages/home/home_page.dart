@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:zc_mobile_app/presentation/_bloc/authentication/authentication.dart';
 import 'package:zc_mobile_app/presentation/pages/mayors_action_center/menu_page.dart';
-import 'package:zc_mobile_app/presentation/widgets/mayors_action_center/menu/menu_form.dart';
+import 'package:zc_mobile_app/presentation/pages/citizen_report/menu_page.dart';
 
 class HomePage extends StatelessWidget {
   final List<String> userInfo;
@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) {
-                              return MenuPage();
+                              return MayorsActionCenterMenuPage();
                             }),
                           );
                         }
@@ -68,7 +68,11 @@ class HomePage extends StatelessWidget {
                         leading: Icon(Icons.report),
                         title: Text("Citizen Report"),
                         onTap: () {
-
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) {
+                              return CitizenReportMenuPage();
+                            }),
+                          );
                         }
                     ),
                     ListTile(
