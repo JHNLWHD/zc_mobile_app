@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
-import 'package:zc_mobile_app/presentation/_bloc/authentication/authentication.dart';
+import 'package:zc_mobile_app/presentation/blocs/authentication/authentication.dart';
 import 'package:zc_mobile_app/presentation/pages/mayors_action_center/menu_page.dart';
 import 'package:zc_mobile_app/presentation/pages/citizen_report/menu_page.dart';
 

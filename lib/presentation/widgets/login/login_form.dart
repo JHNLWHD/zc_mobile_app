@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zc_mobile_app/presentation/_bloc/authentication/authentication.dart';
-import 'package:zc_mobile_app/presentation/_bloc/login/login.dart';
+import 'package:zc_mobile_app/presentation/blocs/authentication/authentication.dart';
+import 'package:zc_mobile_app/presentation/blocs/login/login.dart';
 import 'package:zc_mobile_app/user_repository/user_repository.dart';
 
 import 'create_account_button.dart';

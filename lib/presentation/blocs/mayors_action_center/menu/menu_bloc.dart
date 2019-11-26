@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:zc_mobile_app/presentation/_bloc/citizen_report/menu/menu.dart';
+import 'package:zc_mobile_app/presentation/blocs/mayors_action_center/menu/menu.dart';
 
 
 class MenuBloc extends Bloc<MenuEvent, MenuState> {
@@ -11,15 +11,15 @@ class MenuBloc extends Bloc<MenuEvent, MenuState> {
 
   @override
   Stream<MenuState> mapEventToState(MenuEvent event) async* {
-    if(event is LoadMenu) {
-      yield* _mapMenuWithLoadMenu();
-    } else if (event is CreateRequestPressed) {
+      if(event is LoadMenu) {
+        yield* _mapMenuWithLoadMenu();
+      } else if (event is CreateRequestPressed) {
       yield* _mapMenuWithCreateRequestPressed();
     } else if (event is RequestInformationPressed) {
-      yield* _mapMenuWithRequestInformationPressed();
-    } else if (event is MyRequestPressed) {
-      yield* _mapMenuWithMyRequestPressed();
-    }
+       yield* _mapMenuWithRequestInformationPressed();
+     } else if (event is MyRequestPressed) {
+       yield* _mapMenuWithMyRequestPressed();
+     }
   }
 
   Stream<MenuState> _mapMenuWithLoadMenu() async* {

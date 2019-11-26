@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zc_mobile_app/presentation/_bloc/citizen_report/menu/menu.dart';
+import 'package:zc_mobile_app/presentation/blocs/citizen_report/menu/menu.dart';
 import 'package:zc_mobile_app/presentation/widgets/common/custom_button.dart';
 
 class MenuForm extends StatefulWidget {
