@@ -4,6 +4,7 @@ import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:zc_mobile_app/presentation/blocs/authentication/authentication.dart';
 import 'package:zc_mobile_app/presentation/pages/mayors_action_center/menu_page.dart';
 import 'package:zc_mobile_app/presentation/pages/citizen_report/menu_page.dart';
+import 'package:zc_mobile_app/presentation/pages/peso_job_corner/peso_job_corner_page.dart';
 
 class HomePage extends StatelessWidget {
   final List<String> userInfo;
@@ -79,7 +80,11 @@ class HomePage extends StatelessWidget {
                         leading: Icon(Icons.view_list),
                         title: Text("PESO Job Corner"),
                         onTap: () {
-
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) {
+                              return PesoJobCornerPage();
+                            }),
+                          );
                         }
                     ),
                     ListTile(
