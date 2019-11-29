@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 
 class OfficeButton extends StatelessWidget {
 
-  OfficeButton({this.officeName, this.details, this.officeSeal, this.route});
+  OfficeButton({this.officeName, this.details, this.officeSeal, VoidCallback onPressed})
+      : _onPressed = onPressed;
 
   final String officeName;
   final String details;
   final String officeSeal;
-  final String route;
+  final VoidCallback _onPressed;
 
   final double spacing = 10.0;
   final double radius = 10.0;
@@ -35,7 +36,7 @@ class OfficeButton extends StatelessWidget {
             ),
           ],
         ),
-        onPressed: () { Navigator.pushNamed(context, route);},
+        onPressed: _onPressed,
       ),
     );
   }

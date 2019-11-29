@@ -31,6 +31,7 @@ dependencies:
   firebase_auth:
   google_sign_in:
   font_awesome_flutter: ^8.4.0
+  carousel_pro: ^1.0.0
 
 dev_dependencies:
   flutter_test:
