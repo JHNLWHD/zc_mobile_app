@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zc_mobile_app/presentation/blocs/citizen_report/menu/menu.dart';
+import 'package:zc_mobile_app/presentation/pages/citizen_report/my_reports_page.dart';
 import 'package:zc_mobile_app/presentation/widgets/common/custom_button.dart';
 
 class MenuForm extends StatefulWidget {
@@ -81,7 +82,11 @@ class _MenuFormState extends State<MenuForm> {
                     child: CustomButton(
                       title: 'My Reports',
                       onPressed: () {
-
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) {
+                            return MyReportsPage();
+                          }),
+                        );
                       },
                     ),
                   )
