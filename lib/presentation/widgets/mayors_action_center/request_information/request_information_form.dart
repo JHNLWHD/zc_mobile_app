@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zc_mobile_app/presentation/blocs/mayors_action_center/request_information/request_information_menu/request_information_menu.dart';
+import 'package:zc_mobile_app/presentation/pages/mayors_action_center/office_page.dart';
 import 'office_button.dart';
 
 class RequestInformationForm extends StatefulWidget {
@@ -63,121 +64,165 @@ class _RequestInformationFormState extends State<RequestInformationForm> {
                     officeName: "Office of the City Mayor",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cmo",
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) {
+                          return OfficePage();
+                        }),
+                      );
+                    },
                   ),
                   OfficeButton(
                     officeName: "Sangguniang Panglungsod",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/sp",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Secretary to the Sangguniang Panglungsod",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/ssp",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Administrator",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cao",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Accountant",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/coa",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Treasurer",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cto",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Assessor",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/oca",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "General Services Office",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/gso",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Human Resource Management",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/chrmo",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Engineer",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/ceo",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Health",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cho",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Social Welfare and Development",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cswd",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Budget",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cbo",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Legal",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/clo",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Civil Registrar",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/ccro",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Environment and Natural Resources",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cenro",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Planning and Development",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cpdo",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Agriculturist",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cago",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Veterinarian",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cvo",
+                    onPressed: () {
+
+                    },
                   ),
                   OfficeButton(
                     officeName: "Office of the City Disaster Risk Reduction Management",
                     details: "Address",
                     officeSeal:"assets/seal.png",
-                    route: "offices/cdrrmo",
+                    onPressed: () {
+
+                    },
                   ),
                 ],
               ),
