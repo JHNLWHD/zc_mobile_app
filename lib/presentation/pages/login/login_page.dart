@@ -16,10 +16,6 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GradientAppBar(
-          title: Text('Login'),
-          gradient: LinearGradient(colors: [Colors.blue, Colors.purpleAccent]),
-      ),
       body: BlocProvider<LoginBloc>(
         builder: (context) => LoginBloc(userRepository: _userRepository),
         child: LoginForm(userRepository: _userRepository),
