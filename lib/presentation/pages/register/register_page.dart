@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:zc_mobile_app/presentation/blocs/register/register_bloc.dart';
 import 'package:zc_mobile_app/presentation/widgets/register/register_form.dart';
 import 'package:zc_mobile_app/user_repository/user_repository.dart';
@@ -16,9 +15,12 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: GradientAppBar(
-          title: Text('Register'),
-          gradient: LinearGradient(colors: [Colors.blue, Colors.purpleAccent]),),
+      appBar: AppBar(
+          title: Text('Register'.toUpperCase()),
+          centerTitle: true,
+          backgroundColor: Colors.purple,
+          elevation: 0,
+      ),
       body: Center(
         child: BlocProvider<RegisterBloc>(
           builder: (context) => RegisterBloc(userRepository: _userRepository),
